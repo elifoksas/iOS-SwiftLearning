@@ -48,4 +48,31 @@ logicFunc(x: 3, y: 5)
 
 
 
+//Optionals
+//nil safety
+
+var benimİsmim : String?
+
+benimİsmim?.uppercased()
+
+benimİsmim = "Elif"
+
+benimİsmim?.uppercased()
+
+
+var kullaniciNumarasi = "Elif"
+//force unwrapping
+//var sonuc = Int(kullaniciNumarasi)! * 5
+//! koyulması gelen değerin inte dönüşebileceğini belirtir. yüzde yüz eminsek kullanabiliriz.
+
+var sonuc = (Int(kullaniciNumarasi) ?? 1) * 5
+//gelen değer Int'e cevirilemezse default bir değer vermemizi sağlar.
+
+if let yeniSonuc = Int(kullaniciNumarasi){
+    //kullaniciNumarasi Int'e cevirilevilirse yap.
+    yeniSonuc * 5
+}else{
+    print("rakam gir lütfen")
+}
+
 
